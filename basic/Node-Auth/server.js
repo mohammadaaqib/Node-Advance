@@ -1,17 +1,25 @@
 const express =require  ("express");
 require('dotenv').config();
+const authRoutes=require("./routes/auth-routes");
+const homeRoutes=require("./routes/home-routes");
+const adminRoutes=require("./routes/admin-routes");
+
 
 
 const connectToDB=require("./database/db")
 
 
 const app=express();
-const PORT= process.env.PORT|| 3000;
+const PORT= process.env.PORT || 3000;
 
 connectToDB();
 
 
 app.use(express.json());
+
+app.use('/api/v1/auth',authRoutes);
+app.use('/api/v1/home',homeRoutes);
+app.use('/api/v1/admin',adminRoutes)
 
 
 app.listen(PORT,()=>{

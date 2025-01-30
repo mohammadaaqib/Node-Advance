@@ -8,17 +8,19 @@ const generateToken = require("../utils/generateToken");
 const registerUser = async (req, res) => {
   logger.info("creating user");
   try {
-    const error = validateRegester(req.body);
+    const {error} = validateRegester(req.body);
     if (error) {
-      logger.warn("Validation error", error.detail[0].message);
+      logger.warn("here1",error);
+      logger.warn("Validation error", error.details[0].message);
       return res.status(400).json({
         success: false,
-        message: error.detail[0].message,
+        message: error.details[0].message,
       });
     }
 
+
     const { email, userName, password } = req.body;
-    const user = await User.findOne({ $or: [{ email }, { userName }] });
+    let user = await User.findOne({ $or: [{ email }, { userName }] });
     if (user) {
       logger.warn("user already exists");
       return res.status(400).json({
@@ -28,13 +30,13 @@ const registerUser = async (req, res) => {
     }
     user = new User({ userName, email, password });
     await user.save();
-    logger.warn("user reated successfully", user._id);
+    logger.warn("user created successfully", user);
 
     const { accesstoken, refreshToken } = await generateToken(user);
 
     res.status(201).json({
       success: true,
-      message: "user reated successfully",
+      message: "user created successfully",
       accesstoken,
       refreshToken,
     });
@@ -52,4 +54,4 @@ const registerUser = async (req, res) => {
 
 //logout
 
-model.exports = { registerUser };
+module.exports = { registerUser };

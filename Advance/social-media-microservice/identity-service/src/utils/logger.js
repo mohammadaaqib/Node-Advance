@@ -4,7 +4,7 @@ const logger = winston.createLogger({
   level: process.env.NODE_ENV === "PROD" ? "debug" : "info",
   //what will be the format of our log
   format: winston.format.combine(
-    winston.format.timestamps(),
+    winston.format.timestamp(),
     winston.format.errors({ stack: true }),
     winston.format.splat(),
     winston.format.json()

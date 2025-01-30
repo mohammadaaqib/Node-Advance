@@ -20,7 +20,7 @@ const generateToken = async (user) => {
 
   await RefreshToken.create({
     token: refreshToken,
-    user: user.user._id,
+    user: user._id,
     expiresAt,
   });
 

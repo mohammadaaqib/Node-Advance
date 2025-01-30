@@ -76,9 +76,9 @@ const sensitiveEndpointsLimitting = rateLimit({
   }),
 });
 
-app.use("/api/v1/auth/register", sensitiveEndpointsLimitting);
+app.use("/api/auth/register", sensitiveEndpointsLimitting);
 
-app.use("/api/v1/auth", routes);
+app.use("/api/auth", routes);
 app.use(errorHandler);
 
 app.listen(PORT, () => {

@@ -48,6 +48,7 @@ const registerUser = async (req, res) => {
 };
 //user login
 
+//
 const loginUser = async (req, res) => {
   logger.info("Login user");
   try {

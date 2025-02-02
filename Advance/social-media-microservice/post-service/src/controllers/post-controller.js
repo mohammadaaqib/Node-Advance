@@ -1,9 +1,18 @@
 const logger = require("../utils/logger");
 const Post = require("../models/Post");
+const {validatePost} =require('../utils/validation');
 
 const createPost = async (req, res) => {
   try {
     logger.info("Create post hit");
+    const { error } = validatePost(req.body);
+    if (error) {
+      logger.warn("Validation error", error.details[0].message);
+      return res.status(400).json({
+        success: false,
+        message: error.details[0].message,
+      });
+    }
     const { content, mediaIds } = req.body;
 
     const newPost = new Post({

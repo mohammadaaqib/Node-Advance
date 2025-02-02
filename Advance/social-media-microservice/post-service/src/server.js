@@ -37,6 +37,7 @@ app.use((req, res, next) => {
 app.use(
   "/api/post",
   (req, res, next) => {
+    console.log("here")
     req.redisClient = redisClient;
     next();
   },

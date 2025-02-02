@@ -7,6 +7,7 @@ const redis = require("ioredis");
 const { rateLimit } = require("express-rate-limit");
 const { RedisStore } = require("rate-limit-redis");
 const errorHandler=require("./middleware/errorHandler");
+const {validateUser}= require('./middleware/authMiddleware');
 
 const proxy = require("express-http-proxy");
 
@@ -73,10 +74,30 @@ app.use('/v1/auth',proxy(process.env.IDENTITY_SERVICE_URL,{
       }
 }));
 
+//setting up proxy for our post service
+app.use('/v1/post',validateUser,proxy(process.env.POST_SERVICE_URL,{
+  ...proxyOptions,
+  proxyReqOptDecorator: function(proxyReqOpts, srcReq) {
+      // you can update headers
+      proxyReqOpts.headers['Content-Type'] = 'application/json';
+      proxyReqOpts.headers['x-user-id'] = srcReq.user.userId;
+      // you can change the method
+     // proxyReqOpts.method = 'GET';
+      return proxyReqOpts;
+    },
+    //You can modify the proxy's response before sending it to the client
+    userResDecorator: function(proxyRes, proxyResData, userReq, userRes) {
+    logger.info(`Response reived from post service:${proxyRes.statusCode}`);
+
+      return proxyResData;
+    }
+}));
+
 app.use(errorHandler);
 
 app.listen(PORT,()=>{
     logger.info(`API Gateway is running on port ${PORT}`)
     logger.info(`Indentity service is running on port ${process.env.IDENTITY_SERVICE_URL}`)
+    logger.info(`Post service is running on port ${process.env.POST_SERVICE_URL}`)
     logger.info(`Redis is running on port ${process.env.REDIS_URL}`)
 })

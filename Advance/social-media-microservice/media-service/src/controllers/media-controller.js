@@ -3,8 +3,9 @@ const logger= require('../utils/logger');;
 const {uploadMediaToCloudinary}=require('../utils/cloudinary');
 
 const uploadMedia= async (req,res)=>{
-    logger.info("Contrpller upload Media hit");
+    logger.info("Controller upload Media hit");
     try {
+        const userId=req.user.userId
         
         if(!req.file){
             logger.warn("File does not exist for upload")
@@ -14,17 +15,17 @@ const uploadMedia= async (req,res)=>{
             })
         }
         
-        const {orignalName,mimetype,buffer}=req.file;;
-        logger.info("File detail",orignalName,"mimeType",mimetype);
+        const {originalname,mimetype,buffer}=req.file;;
+        logger.info(`File detail ${originalname} ${mimetype}  ${userId}`);
         
         const cloudinaryResponse=await uploadMediaToCloudinary(req.file);
         
         const newfile=new Media({
-            orignalName:orignalName,
-            mimeType:mimetype,
+            orignalName:originalname,
+            mimetype:mimetype,
             publicId:cloudinaryResponse.public_id,
             url:cloudinaryResponse.secure_url,
-            user:req.userId
+            userId:userId
         });
         
         await  newfile.save();

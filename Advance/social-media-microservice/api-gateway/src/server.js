@@ -94,12 +94,39 @@ app.use('/v1/post',validateUser,proxy(process.env.POST_SERVICE_URL,{
     }
 }));
 
+//setting up proxy for our media service
+app.use('/v1/media',validateUser,proxy(process.env.MEDIA_SERVICE_URL,{
+  ...proxyOptions,
+  proxyReqOptDecorator: function(proxyReqOpts, srcReq) {
+      // you can update headers
+      proxyReqOpts.headers['x-user-id'] = srcReq.user.userId;
+      console.log(srcReq.headers['content-type']);
+      
+//       if(!srcReq.headers['content-type'].startsWith('multipart/form-data')){
+// console.log("in error")
+//         proxyReqOpts.headers['Content-Type'] = 'application/json';
+//       }
+      // you can change the method
+     // proxyReqOpts.method = 'GET';
+      return proxyReqOpts;
+    },
+    //You can modify the proxy's response before sending it to the client
+    userResDecorator: function(proxyRes, proxyResData, userReq, userRes) {
+    logger.info(`Response reived from media service:${proxyRes.statusCode}`);
+
+      return proxyResData;
+    },
+    parseReqBody: false,
+}));
+
+
 app.use(errorHandler);
 
 app.listen(PORT,()=>{
     logger.info(`API Gateway is running on port ${PORT}`)
     logger.info(`Indentity service is running on port ${process.env.IDENTITY_SERVICE_URL}`)
     logger.info(`Post service is running on port ${process.env.POST_SERVICE_URL}`)
+    logger.info(`Media service is running on port ${process.env.MEDIA_SERVICE_URL}`)
     logger.info(`Redis is running on port ${process.env.REDIS_URL}`)
 })
 

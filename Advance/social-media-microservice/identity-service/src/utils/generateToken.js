@@ -9,9 +9,9 @@ const generateToken = async (user) => {
       userName: user.userName,
     },
     process.env.JWT_SECRET,
-    {
-      expiresIn: "60m",
-    }
+    // {
+    //   expiresIn: "5m",
+    // }
   );
 
   const refreshToken = crypto.randomBytes(40).toString("hex");

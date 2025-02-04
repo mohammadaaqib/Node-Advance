@@ -49,10 +49,11 @@ const proxyOptions = {
   },
   proxyErrorHandler: (err, res, next) => {
     logger.error(`Proxy error:${err.message}`);
-    res.status(500).json({
+   return res.status(500).json({
       message: `Internal server error`,
       error: err.message,
     });
+    next()
   }
 };
 
@@ -101,3 +102,7 @@ app.listen(PORT,()=>{
     logger.info(`Post service is running on port ${process.env.POST_SERVICE_URL}`)
     logger.info(`Redis is running on port ${process.env.REDIS_URL}`)
 })
+
+process.on("unhandledRejeciton", (reason, promise) => {
+  logger.error("unhandledRejeciton at ", promise, "reason", reason);
+});

@@ -1,0 +1,191 @@
+{"level":"info","message":"API Gateway is running on port 3000","service":"identity-service","timestamp":"2025-02-04T12:26:49.814Z"}
+{"level":"info","message":"Indentity service is running on port http://localhost:3001","service":"identity-service","timestamp":"2025-02-04T12:26:49.816Z"}
+{"level":"info","message":"Post service is running on port http://localhost:3002","service":"identity-service","timestamp":"2025-02-04T12:26:49.816Z"}
+{"level":"info","message":"Media service is running on port http://localhost:3003","service":"identity-service","timestamp":"2025-02-04T12:26:49.817Z"}
+{"level":"info","message":"Redis is running on port redis://localhost:6379","service":"identity-service","timestamp":"2025-02-04T12:26:49.817Z"}
+{"level":"info","message":"Received POST request to /v1/auth/login","service":"identity-service","timestamp":"2025-02-04T12:28:08.706Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T12:28:08.706Z"}
+{"level":"info","message":"Response reived from Identity service:200","service":"identity-service","timestamp":"2025-02-04T12:28:09.888Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T12:29:39.007Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T12:29:39.007Z"}
+{"level":"error","message":"TypeError: Cannot read properties of undefined (reading 'split')\n    at validateUser (D:\\Node js PRO ACC\\Node-Advance\\Advance\\social-media-microservice\\api-gateway\\src\\middleware\\authMiddleware.js:7:43)\n    at Layer.handle [as handle_request] (D:\\Node js PRO ACC\\Node-Advance\\Advance\\social-media-microservice\\api-gateway\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (D:\\Node js PRO ACC\\Node-Advance\\Advance\\social-media-microservice\\api-gateway\\node_modules\\express\\lib\\router\\index.js:328:13)\n    at D:\\Node js PRO ACC\\Node-Advance\\Advance\\social-media-microservice\\api-gateway\\node_modules\\express\\lib\\router\\index.js:286:9\n    at Function.process_params (D:\\Node js PRO ACC\\Node-Advance\\Advance\\social-media-microservice\\api-gateway\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (D:\\Node js PRO ACC\\Node-Advance\\Advance\\social-media-microservice\\api-gateway\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at D:\\Node js PRO ACC\\Node-Advance\\Advance\\social-media-microservice\\api-gateway\\src\\server.js:42:3\n    at Layer.handle [as handle_request] (D:\\Node js PRO ACC\\Node-Advance\\Advance\\social-media-microservice\\api-gateway\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (D:\\Node js PRO ACC\\Node-Advance\\Advance\\social-media-microservice\\api-gateway\\node_modules\\express\\lib\\router\\index.js:328:13)\n    at D:\\Node js PRO ACC\\Node-Advance\\Advance\\social-media-microservice\\api-gateway\\node_modules\\express\\lib\\router\\index.js:286:9","service":"identity-service","timestamp":"2025-02-04T12:29:39.008Z"}
+{"level":"info","message":"API Gateway is running on port 3000","service":"identity-service","timestamp":"2025-02-04T12:31:09.838Z"}
+{"level":"info","message":"Indentity service is running on port http://localhost:3001","service":"identity-service","timestamp":"2025-02-04T12:31:09.840Z"}
+{"level":"info","message":"Post service is running on port http://localhost:3002","service":"identity-service","timestamp":"2025-02-04T12:31:09.840Z"}
+{"level":"info","message":"Media service is running on port http://localhost:3003","service":"identity-service","timestamp":"2025-02-04T12:31:09.841Z"}
+{"level":"info","message":"Redis is running on port redis://localhost:6379","service":"identity-service","timestamp":"2025-02-04T12:31:09.841Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T12:31:13.599Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T12:31:13.600Z"}
+{"level":"error","message":"TypeError: Cannot read properties of undefined (reading 'split')\n    at validateUser (D:\\Node js PRO ACC\\Node-Advance\\Advance\\social-media-microservice\\api-gateway\\src\\middleware\\authMiddleware.js:6:44)\n    at Layer.handle [as handle_request] (D:\\Node js PRO ACC\\Node-Advance\\Advance\\social-media-microservice\\api-gateway\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (D:\\Node js PRO ACC\\Node-Advance\\Advance\\social-media-microservice\\api-gateway\\node_modules\\express\\lib\\router\\index.js:328:13)\n    at D:\\Node js PRO ACC\\Node-Advance\\Advance\\social-media-microservice\\api-gateway\\node_modules\\express\\lib\\router\\index.js:286:9\n    at Function.process_params (D:\\Node js PRO ACC\\Node-Advance\\Advance\\social-media-microservice\\api-gateway\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (D:\\Node js PRO ACC\\Node-Advance\\Advance\\social-media-microservice\\api-gateway\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at D:\\Node js PRO ACC\\Node-Advance\\Advance\\social-media-microservice\\api-gateway\\src\\server.js:42:3\n    at Layer.handle [as handle_request] (D:\\Node js PRO ACC\\Node-Advance\\Advance\\social-media-microservice\\api-gateway\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (D:\\Node js PRO ACC\\Node-Advance\\Advance\\social-media-microservice\\api-gateway\\node_modules\\express\\lib\\router\\index.js:328:13)\n    at D:\\Node js PRO ACC\\Node-Advance\\Advance\\social-media-microservice\\api-gateway\\node_modules\\express\\lib\\router\\index.js:286:9","service":"identity-service","timestamp":"2025-02-04T12:31:13.601Z"}
+{"level":"info","message":"API Gateway is running on port 3000","service":"identity-service","timestamp":"2025-02-04T12:31:55.143Z"}
+{"level":"info","message":"Indentity service is running on port http://localhost:3001","service":"identity-service","timestamp":"2025-02-04T12:31:55.145Z"}
+{"level":"info","message":"Post service is running on port http://localhost:3002","service":"identity-service","timestamp":"2025-02-04T12:31:55.145Z"}
+{"level":"info","message":"Media service is running on port http://localhost:3003","service":"identity-service","timestamp":"2025-02-04T12:31:55.146Z"}
+{"level":"info","message":"Redis is running on port redis://localhost:6379","service":"identity-service","timestamp":"2025-02-04T12:31:55.146Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T12:32:00.504Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T12:32:00.506Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T12:32:00.507Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T12:32:19.461Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T12:32:19.462Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T12:32:19.462Z"}
+{"level":"error","message":"Proxy error:Cannot read properties of undefined (reading 'startsWith')","service":"identity-service","timestamp":"2025-02-04T12:32:19.466Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T12:33:09.933Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T12:33:09.934Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T12:33:09.934Z"}
+{"level":"info","message":"Response reived from media service:400","service":"identity-service","timestamp":"2025-02-04T12:33:09.955Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T12:34:56.251Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T12:34:56.251Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T12:34:56.252Z"}
+{"level":"info","message":"Response reived from media service:400","service":"identity-service","timestamp":"2025-02-04T12:34:56.263Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T12:37:46.098Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T12:37:46.099Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T12:37:46.099Z"}
+{"level":"info","message":"Response reived from media service:400","service":"identity-service","timestamp":"2025-02-04T12:37:46.127Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T12:44:04.411Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T12:44:04.411Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T12:44:04.412Z"}
+{"level":"info","message":"Response reived from media service:400","service":"identity-service","timestamp":"2025-02-04T12:44:04.427Z"}
+{"level":"info","message":"API Gateway is running on port 3000","service":"identity-service","timestamp":"2025-02-04T12:46:16.092Z"}
+{"level":"info","message":"Indentity service is running on port http://localhost:3001","service":"identity-service","timestamp":"2025-02-04T12:46:16.095Z"}
+{"level":"info","message":"Post service is running on port http://localhost:3002","service":"identity-service","timestamp":"2025-02-04T12:46:16.095Z"}
+{"level":"info","message":"Media service is running on port http://localhost:3003","service":"identity-service","timestamp":"2025-02-04T12:46:16.096Z"}
+{"level":"info","message":"Redis is running on port redis://localhost:6379","service":"identity-service","timestamp":"2025-02-04T12:46:16.096Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T12:46:24.402Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T12:46:24.402Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T12:46:24.403Z"}
+{"level":"info","message":"Response reived from media service:400","service":"identity-service","timestamp":"2025-02-04T12:46:24.419Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T12:46:45.857Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T12:46:45.858Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T12:46:45.859Z"}
+{"level":"info","message":"Response reived from media service:400","service":"identity-service","timestamp":"2025-02-04T12:46:45.884Z"}
+{"level":"info","message":"API Gateway is running on port 3000","service":"identity-service","timestamp":"2025-02-04T12:47:08.368Z"}
+{"level":"info","message":"Indentity service is running on port http://localhost:3001","service":"identity-service","timestamp":"2025-02-04T12:47:08.371Z"}
+{"level":"info","message":"Post service is running on port http://localhost:3002","service":"identity-service","timestamp":"2025-02-04T12:47:08.371Z"}
+{"level":"info","message":"Media service is running on port http://localhost:3003","service":"identity-service","timestamp":"2025-02-04T12:47:08.372Z"}
+{"level":"info","message":"Redis is running on port redis://localhost:6379","service":"identity-service","timestamp":"2025-02-04T12:47:08.372Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T12:47:14.145Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T12:47:14.146Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T12:47:14.146Z"}
+{"level":"info","message":"Response reived from media service:400","service":"identity-service","timestamp":"2025-02-04T12:47:14.160Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T13:06:36.954Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T13:06:36.955Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T13:06:36.956Z"}
+{"level":"info","message":"Response reived from media service:400","service":"identity-service","timestamp":"2025-02-04T13:06:36.975Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T13:07:19.785Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T13:07:19.786Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T13:07:19.786Z"}
+{"level":"info","message":"Response reived from media service:400","service":"identity-service","timestamp":"2025-02-04T13:07:19.796Z"}
+{"level":"info","message":"API Gateway is running on port 3000","service":"identity-service","timestamp":"2025-02-04T13:08:37.970Z"}
+{"level":"info","message":"Indentity service is running on port http://localhost:3001","service":"identity-service","timestamp":"2025-02-04T13:08:37.972Z"}
+{"level":"info","message":"Post service is running on port http://localhost:3002","service":"identity-service","timestamp":"2025-02-04T13:08:37.972Z"}
+{"level":"info","message":"Media service is running on port http://localhost:3003","service":"identity-service","timestamp":"2025-02-04T13:08:37.973Z"}
+{"level":"info","message":"Redis is running on port redis://localhost:6379","service":"identity-service","timestamp":"2025-02-04T13:08:37.973Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T13:08:46.105Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T13:08:46.106Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T13:08:46.106Z"}
+{"level":"info","message":"Response reived from media service:400","service":"identity-service","timestamp":"2025-02-04T13:08:46.118Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T13:09:13.591Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T13:09:13.592Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T13:09:13.593Z"}
+{"level":"info","message":"Response reived from media service:400","service":"identity-service","timestamp":"2025-02-04T13:09:13.602Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T13:11:27.131Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T13:11:27.132Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T13:11:27.132Z"}
+{"level":"info","message":"Response reived from media service:400","service":"identity-service","timestamp":"2025-02-04T13:11:27.141Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T13:14:56.589Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T13:14:56.590Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T13:14:56.590Z"}
+{"level":"info","message":"Response reived from media service:400","service":"identity-service","timestamp":"2025-02-04T13:14:56.604Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T13:15:32.149Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T13:15:32.150Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T13:15:32.150Z"}
+{"level":"info","message":"Response reived from media service:400","service":"identity-service","timestamp":"2025-02-04T13:15:32.166Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T13:15:43.402Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T13:15:43.402Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T13:15:43.403Z"}
+{"level":"info","message":"Response reived from media service:400","service":"identity-service","timestamp":"2025-02-04T13:15:43.410Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T13:16:23.251Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T13:16:23.252Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T13:16:23.253Z"}
+{"level":"info","message":"Response reived from media service:400","service":"identity-service","timestamp":"2025-02-04T13:16:23.316Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T13:17:45.641Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T13:17:45.641Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T13:17:45.642Z"}
+{"level":"info","message":"Response reived from media service:400","service":"identity-service","timestamp":"2025-02-04T13:17:45.660Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T13:19:13.862Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T13:19:13.862Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T13:19:13.863Z"}
+{"level":"info","message":"Response reived from media service:400","service":"identity-service","timestamp":"2025-02-04T13:19:13.871Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T13:19:31.936Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T13:19:31.936Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T13:19:31.937Z"}
+{"level":"info","message":"Response reived from media service:500","service":"identity-service","timestamp":"2025-02-04T13:19:31.955Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T13:19:56.353Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T13:19:56.353Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T13:19:56.354Z"}
+{"level":"info","message":"Response reived from media service:400","service":"identity-service","timestamp":"2025-02-04T13:19:56.369Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T13:21:50.357Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T13:21:50.358Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T13:21:50.358Z"}
+{"level":"error","message":"Proxy error:connect ECONNREFUSED 127.0.0.1:3003","service":"identity-service","timestamp":"2025-02-04T13:21:50.361Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T13:22:00.103Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T13:22:00.103Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T13:22:00.104Z"}
+{"level":"info","message":"Response reived from media service:400","service":"identity-service","timestamp":"2025-02-04T13:22:00.121Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T13:22:17.934Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T13:22:17.935Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T13:22:17.935Z"}
+{"level":"info","message":"Response reived from media service:400","service":"identity-service","timestamp":"2025-02-04T13:22:17.943Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T13:28:23.190Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T13:28:23.191Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T13:28:23.191Z"}
+{"level":"info","message":"Response reived from media service:500","service":"identity-service","timestamp":"2025-02-04T13:28:23.212Z"}
+{"level":"info","message":"API Gateway is running on port 3000","service":"identity-service","timestamp":"2025-02-04T13:31:30.914Z"}
+{"level":"info","message":"Indentity service is running on port http://localhost:3001","service":"identity-service","timestamp":"2025-02-04T13:31:30.917Z"}
+{"level":"info","message":"Post service is running on port http://localhost:3002","service":"identity-service","timestamp":"2025-02-04T13:31:30.917Z"}
+{"level":"info","message":"Media service is running on port http://localhost:3003","service":"identity-service","timestamp":"2025-02-04T13:31:30.918Z"}
+{"level":"info","message":"Redis is running on port redis://localhost:6379","service":"identity-service","timestamp":"2025-02-04T13:31:30.918Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T13:31:55.066Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T13:31:55.066Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T13:31:55.067Z"}
+{"level":"info","message":"Response reived from media service:500","service":"identity-service","timestamp":"2025-02-04T13:31:58.718Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T13:37:24.126Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T13:37:24.127Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T13:37:24.127Z"}
+{"level":"info","message":"Response reived from media service:500","service":"identity-service","timestamp":"2025-02-04T13:37:24.150Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T13:37:45.225Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T13:37:45.225Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T13:37:45.226Z"}
+{"level":"info","message":"Response reived from media service:500","service":"identity-service","timestamp":"2025-02-04T13:37:47.879Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T13:39:05.111Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T13:39:05.111Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T13:39:05.111Z"}
+{"level":"info","message":"Response reived from media service:500","service":"identity-service","timestamp":"2025-02-04T13:39:07.750Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T13:39:27.381Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T13:39:27.382Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T13:39:27.382Z"}
+{"level":"info","message":"Response reived from media service:500","service":"identity-service","timestamp":"2025-02-04T13:39:29.885Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T13:41:12.088Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T13:41:12.088Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T13:41:12.088Z"}
+{"level":"info","message":"Response reived from media service:500","service":"identity-service","timestamp":"2025-02-04T13:41:14.690Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T13:42:16.084Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T13:42:16.084Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T13:42:16.085Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T13:43:59.047Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T13:43:59.047Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T13:43:59.047Z"}
+{"level":"info","message":"Response reived from media service:200","service":"identity-service","timestamp":"2025-02-04T13:44:02.245Z"}
+{"level":"info","message":"Response reived from media service:500","service":"identity-service","timestamp":"2025-02-04T13:44:17.845Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T18:00:36.276Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T18:00:36.278Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T18:00:36.282Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T18:01:10.353Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T18:01:10.353Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T18:01:10.354Z"}
+{"level":"info","message":"Response reived from media service:500","service":"identity-service","timestamp":"2025-02-04T18:01:41.330Z"}
+{"level":"info","message":"Response reived from media service:500","service":"identity-service","timestamp":"2025-02-04T18:01:53.136Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"identity-service","timestamp":"2025-02-04T18:02:07.987Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-02-04T18:02:07.987Z"}
+{"level":"info","message":"Validation middleware","service":"identity-service","timestamp":"2025-02-04T18:02:07.988Z"}
+{"level":"info","message":"Response reived from media service:200","service":"identity-service","timestamp":"2025-02-04T18:02:12.021Z"}

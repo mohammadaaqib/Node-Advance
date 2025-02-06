@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const helmet = require("helmet");
 const cors = require("cors");
 const redis = require("ioredis");
+const { connectRabbitMQ } = require("./utils/rabbitmq");
 
 const postRoutes = require("./routes/post-routes");
 const errorHandler = require("./middleware/errorHandler");
@@ -37,7 +38,7 @@ app.use((req, res, next) => {
 app.use(
   "/api/post",
   (req, res, next) => {
-    console.log("here")
+    console.log("here");
     req.redisClient = redisClient;
     next();
   },
@@ -45,10 +46,19 @@ app.use(
 );
 app.use(errorHandler);
 
-app.listen(PORT, () => {
-  logger.info(`post service running on port ${PORT}`);
-});
+async function startServer() {
+  try {
+    await connectRabbitMQ();
+    app.listen(PORT, () => {
+      logger.info(`post service running on port ${PORT}`);
+    });
+  } catch (error) {
+    logger.error("Failed to connect to server", error);
+    process.exit(1);
+  }
+}
 
+startServer();
 process.on("unhandledRejeciton", (reason, promise) => {
   logger.error("unhandledRejeciton at ", promise, "reason", reason);
 });

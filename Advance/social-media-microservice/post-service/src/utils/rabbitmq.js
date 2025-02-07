@@ -22,4 +22,16 @@ async function connectRabbitMQ() {
     }
     
 }
-module.exports={connectRabbitMQ}
+
+async function publishEvent(routingKey,message) {
+    if(!channel){
+        await connectRabbitMQ()
+    }
+
+    channel.publish(EXCHANGE_NAME,routingKey,Buffer.from(JSON.stringify(message)));
+    logger.info("Event publish",routingKey);
+    
+}
+
+
+module.exports={connectRabbitMQ,publishEvent}

@@ -7,6 +7,8 @@ const cors = require("cors");
 
 const mediaRoutes = require("./routes/media-routes");
 const errorHandler = require("./middleware/errorHandler");
+const {connectRabbitMQ,consumeEvent}= require('./utils/rabbitmq');
+const{handlePostDeleted}=require('./eventHandler/mediaEventHandlers');
 
 const PORT = process.env.PORT || 3003;
 const app = express();
@@ -33,10 +35,23 @@ app.use((req, res, next) => {
 
 app.use("/api/media", mediaRoutes);
 app.use(errorHandler);
+async function startServer() {
 
-app.listen(PORT, () => {
-  logger.info(`post service running on port ${PORT}`);
-});
+  try {
+    await connectRabbitMQ();
+    await consumeEvent('post.delete',handlePostDeleted)
+    app.listen(PORT, () => {
+      logger.info(`Media service running on port ${PORT}`);
+    });
+  } catch (error) {
+    logger.error("Failed to connect to server", error);
+    process.exit(1);
+  }
+}
+  
+
+  
+  startServer();
 
 process.on("unhandledRejeciton", (reason, promise) => {
   logger.error("unhandledRejeciton at ", promise, "reason", reason);

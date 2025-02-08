@@ -120,6 +120,25 @@ app.use('/v1/media',validateUser,proxy(process.env.MEDIA_SERVICE_URL,{
 }));
 
 
+//setting up proxy for our search service
+app.use('/v1/search',validateUser,proxy(process.env.SEARCH_SERVICE_URL,{
+  ...proxyOptions,
+  proxyReqOptDecorator: function(proxyReqOpts, srcReq) {
+      // you can update headers
+      proxyReqOpts.headers['Content-Type'] = 'application/json';
+      proxyReqOpts.headers['x-user-id'] = srcReq.user.userId;
+      // you can change the method
+     // proxyReqOpts.method = 'GET';
+      return proxyReqOpts;
+    },
+    //You can modify the proxy's response before sending it to the client
+    userResDecorator: function(proxyRes, proxyResData, userReq, userRes) {
+    logger.info(`Response reived from search service:${proxyRes.statusCode}`);
+
+      return proxyResData;
+    }
+}));
+
 app.use(errorHandler);
 
 app.listen(PORT,()=>{
@@ -127,6 +146,7 @@ app.listen(PORT,()=>{
     logger.info(`Indentity service is running on port ${process.env.IDENTITY_SERVICE_URL}`)
     logger.info(`Post service is running on port ${process.env.POST_SERVICE_URL}`)
     logger.info(`Media service is running on port ${process.env.MEDIA_SERVICE_URL}`)
+    logger.info(`Search service is running on port ${process.env.SEARCH_SERVICE_URL}`)
     logger.info(`Redis is running on port ${process.env.REDIS_URL}`)
 })
 
